@@ -21,7 +21,7 @@ docker:
   services:
         - docker:20.10.16-dind
   only:
-    - master
+    - main
   before_script:
     - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
   script:
