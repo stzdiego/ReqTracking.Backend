@@ -11,7 +11,6 @@
     <list default="true" id="92fd4d05-f0e1-44b3-ba98-b803e5f7897a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReqTracking.Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReqTracking.Backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/appsettings.Development.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +147,8 @@
       <workItem from="1731336094558" duration="9787000" />
       <workItem from="1731419865070" duration="24646000" />
       <workItem from="1731477490724" duration="379000" />
-      <workItem from="1731505749844" duration="669000" />
+      <workItem from="1731505749844" duration="1692000" />
+      <workItem from="1731508255351" duration="3147000" />
     </task>
     <servers />
   </component>
