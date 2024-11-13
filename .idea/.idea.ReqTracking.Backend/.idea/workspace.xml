@@ -9,25 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92fd4d05-f0e1-44b3-ba98-b803e5f7897a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ReqTracking.Backend/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/AuthenticationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Dtos/RegisterDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Dtos/RequerimentFilterDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReqTracking.Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReqTracking.Backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/RequerimentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/RequerimentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/TrackingsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/TrackingsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Dtos/ChangeStageDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Dtos/ChangeStageDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Enums/Priority.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Enums/Priority.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Enums/Stage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Enums/Stage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Models/Requeriment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Models/Requeriment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Models/Tracking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Models/Tracking.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.http" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/WeatherForecast.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/appsettings.Development.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,26 +43,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.ReqTracking.Backend: http.executor": "Run",
-    "HTTP Request.All in ReqTracking.Backend.executor": "Run",
-    "HTTP Request.ReqTracking.Backend | #1.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.ReqTracking.Backend: http.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.All in ReqTracking.Backend.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.ReqTracking.Backend | #1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ReqTracking.Backend: http">
     <configuration name="All in ReqTracking.Backend" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.http">
       <method v="2" />
@@ -165,6 +148,7 @@
       <workItem from="1731336094558" duration="9787000" />
       <workItem from="1731419865070" duration="24646000" />
       <workItem from="1731477490724" duration="379000" />
+      <workItem from="1731505749844" duration="669000" />
     </task>
     <servers />
   </component>
