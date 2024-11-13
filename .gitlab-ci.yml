@@ -1,0 +1,32 @@
+image: mcr.microsoft.com/dotnet/sdk:8.0
+
+stages:
+  - build
+  - docker
+
+build:
+  stage: build
+  only: 
+    - main
+  script:
+    - dotnet nuget add source https://gitlab.siesadev.com/api/v4/projects/316/packages/nuget/index.json -n GitLabSDE -u $GITLAB_NUGET_SRC_USER -p $GITLAB_NUGET_SRC_TOKEN --store-password-in-clear-text
+    - dotnet restore
+    - dotnet build -c Release
+  tags:
+    - dotnet
+
+docker:
+  stage: docker
+  image: docker:20.10.16
+  services:
+        - docker:20.10.16-dind
+  only:
+    - master
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:latest
+  tags:
+    - docker
