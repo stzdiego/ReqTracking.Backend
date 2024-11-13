@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ReqTracking.Backend.Context;
 using ReqTracking.Backend.Models;
+using BCrypt.Net;
 
 namespace ReqTracking.Backend.Controllers;
 
@@ -30,9 +31,17 @@ public class UsersController(ApplicationDbContext context) : Controller
     [HttpPost]
     public async Task<IActionResult> Post(User user)
     {
+        if (context.Users.Any(u => u.Email.ToLower() == user.Email.ToLower()))
+        {
+            return BadRequest("Email already in use");
+        }
+        
+        user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+        user.Email = user.Email.ToLower();
+        
         context.Users.Add(user);
         await context.SaveChangesAsync();
-        return CreatedAtRoute("GetUser", new { id = user.Id }, user);
+        return Ok(user.Id);
     }
     
     [HttpPut("{id}")]

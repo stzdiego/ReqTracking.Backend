@@ -4,6 +4,8 @@ namespace ReqTracking.Backend.Dtos;
 
 public class ChangeStageDto
 {
-    public int Id { get; set; }
+    public int IdRequeriment { get; set; }
+    public int IdUser { get; set; }
     public Stage Stage { get; set; }
+    public string Description { get; set; } = string.Empty;
 }

@@ -11,7 +11,11 @@ public class TrackingsController(ApplicationDbContext context) : Controller
     [HttpGet("{reqId}")]
     public async Task<IActionResult> Get(int reqId)
     {
-        var trackings = await context.Trackings.Where(t => t.RequerimentId == reqId).ToListAsync();
+        var trackings = await context.Trackings
+            .Where(t => t.RequerimentId == reqId)
+            .Include(x => x.User)
+            .Include(x => x.Requeriment)
+            .ToListAsync();
         return Ok(trackings);
     }
 }

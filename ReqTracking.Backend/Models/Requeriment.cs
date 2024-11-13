@@ -19,9 +19,9 @@ public class Requeriment
     
     [ForeignKey(nameof(UserCreator))]
     public int UserCreatorId { get; set; }
-    public User UserCreator { get; set; } = null!;
+    public User? UserCreator { get; set; }
     
     [ForeignKey(nameof(UserAssigned))]
-    public int UserAssignedId { get; set; }
+    public int? UserAssignedId { get; set; }
     public User? UserAssigned { get; set; }
 }

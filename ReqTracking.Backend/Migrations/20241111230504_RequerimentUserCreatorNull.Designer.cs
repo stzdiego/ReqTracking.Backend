@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ReqTracking.Backend.Context;
@@ -11,9 +12,11 @@ using ReqTracking.Backend.Context;
 namespace ReqTracking.Backend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241111230504_RequerimentUserCreatorNull")]
+    partial class RequerimentUserCreatorNull
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,7 +53,7 @@ namespace ReqTracking.Backend.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int?>("UserAssignedId")
+                    b.Property<int>("UserAssignedId")
                         .HasColumnType("integer");
 
                     b.Property<int>("UserCreatorId")
@@ -86,14 +89,9 @@ namespace ReqTracking.Backend.Migrations
                     b.Property<int>("Stage")
                         .HasColumnType("integer");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
                     b.HasIndex("RequerimentId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Trackings");
                 });
@@ -159,7 +157,9 @@ namespace ReqTracking.Backend.Migrations
                 {
                     b.HasOne("ReqTracking.Backend.Models.User", "UserAssigned")
                         .WithMany()
-                        .HasForeignKey("UserAssignedId");
+                        .HasForeignKey("UserAssignedId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ReqTracking.Backend.Models.User", "UserCreator")
                         .WithMany()
@@ -180,15 +180,7 @@ namespace ReqTracking.Backend.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ReqTracking.Backend.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Requeriment");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ReqTracking.Backend.Models.UserLead", b =>

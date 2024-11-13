@@ -2,15 +2,14 @@
 USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
-EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["ReqTracking.Backend/ReqTracking.Backend.csproj", "ReqTracking.Backend/"]
-RUN dotnet restore "ReqTracking.Backend/ReqTracking.Backend.csproj"
+COPY ["ReqTracking.Backend.csproj", "."]
+RUN dotnet restore "ReqTracking.Backend.csproj"
 COPY . .
-WORKDIR "/src/ReqTracking.Backend"
+WORKDIR "/src"
 RUN dotnet build "ReqTracking.Backend.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish

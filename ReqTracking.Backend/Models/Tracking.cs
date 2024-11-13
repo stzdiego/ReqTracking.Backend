@@ -12,7 +12,11 @@ public class Tracking
     public string Description { get; set; } = string.Empty;
     public DateTime Date { get; set; } = DateTime.UtcNow;
 
-    [ForeignKey(nameof(User))]
+    [ForeignKey(nameof(Requeriment))]
     public int RequerimentId { get; set; }
     public Requeriment Requeriment { get; set; } = null!;
+    
+    [ForeignKey(nameof(User))]
+    public int UserId { get; set; }
+    public User User { get; set; } = null!;
 }

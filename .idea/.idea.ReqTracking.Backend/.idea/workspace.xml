@@ -9,29 +9,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92fd4d05-f0e1-44b3-ba98-b803e5f7897a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Context/ApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/RequerimentsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/TrackingsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/UsersController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Dtos/ChangeStageDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Enums/Priority.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Enums/Role.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Enums/Stage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Models/Requeriment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Models/Tracking.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Models/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Models/UserLead.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ReqTracking.Backend/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/AuthenticationController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Dtos/RegisterDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReqTracking.Backend/Dtos/RequerimentFilterDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReqTracking.Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReqTracking.Backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/RequerimentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/RequerimentsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/TrackingsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/TrackingsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Controllers/UsersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Dtos/ChangeStageDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Dtos/ChangeStageDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Enums/Priority.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Enums/Priority.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Enums/Stage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Enums/Stage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Models/Requeriment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Models/Requeriment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Models/Tracking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Models/Tracking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.http" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/WeatherForecast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReqTracking.Backend/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ReqTracking.Backend/appsettings.Development.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +41,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/43e8f7a9cd8d319c7fc35c607ae822ee35b3643e125219b17031433840653d52/IPEndPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/db7395f4add94e6d10e515b3e55373f2821f8323de7dc8e314d78feefacf5584/ActionMethodExecutor.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2oVEIm3x0Nj1tFjfsSBPC20KVhi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -58,17 +63,30 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.ReqTracking.Backend: http.executor": "Run",
+    "HTTP Request.All in ReqTracking.Backend.executor": "Run",
+    "HTTP Request.ReqTracking.Backend | #1.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ReqTracking.Backend: http">
+    <configuration name="All in ReqTracking.Backend" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="ReqTracking.Backend | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="ReqTracking.Backend: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/ReqTracking.Backend/ReqTracking.Backend.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -121,9 +139,18 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.ReqTracking.Backend | #1" />
+        <item itemvalue="HTTP Request.All in ReqTracking.Backend" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -133,7 +160,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730946265631</updated>
-      <workItem from="1730946266904" duration="4437000" />
+      <workItem from="1730946266904" duration="4497000" />
+      <workItem from="1731011736906" duration="647000" />
+      <workItem from="1731336094558" duration="9787000" />
+      <workItem from="1731419865070" duration="24646000" />
+      <workItem from="1731477490724" duration="379000" />
     </task>
     <servers />
   </component>

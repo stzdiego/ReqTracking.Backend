@@ -1,6 +1,6 @@
 @ReqTracking.Backend_HostAddress = http://localhost:5113
 
-GET {{ReqTracking.Backend_HostAddress}}/weatherforecast/
+GET {{ReqTracking.Backend_HostAddress}}/Requeriments/
 Accept: application/json
 
 ###

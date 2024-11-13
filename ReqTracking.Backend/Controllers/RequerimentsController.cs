@@ -14,14 +14,21 @@ public class RequerimentsController(ApplicationDbContext context) : Controller
     [HttpGet]
     public async Task<IActionResult> Get()
     {
-        var requeriments = await context.Requeriments.ToListAsync();
+        var requeriments = await context.Requeriments
+            .Include(x => x.UserCreator)
+            .Include(x => x.UserAssigned)
+            .ToListAsync();
         return Ok(requeriments);
     }
     
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(int id)
     {
-        var requeriment = await context.Requeriments.FindAsync(id);
+        var requeriment = await context.Requeriments
+            .Include(x => x.UserCreator)
+            .Include(x => x.UserAssigned)
+            .FirstOrDefaultAsync(x => x.Id == id);
+            
         if (requeriment == null)
         {
             return NotFound();
@@ -30,11 +37,52 @@ public class RequerimentsController(ApplicationDbContext context) : Controller
     }
     
     [HttpPost]
-    public async Task<IActionResult> Post(Requeriment requeriment)
+    public async Task<IActionResult> Post([FromBody] Requeriment requeriment)
     {
         context.Requeriments.Add(requeriment);
         await context.SaveChangesAsync();
         return CreatedAtRoute("GetRequeriment", new { id = requeriment.Id }, requeriment);
+    }
+    
+    [HttpPost("list")]
+    public async Task <IActionResult> List([FromBody] Requeriment[] requeriments)
+    {
+        context.Requeriments.AddRange(requeriments);
+        await context.SaveChangesAsync();
+        return Ok();
+    }
+    
+    [HttpPost("filter")]
+    public async Task<IActionResult> Filter([FromBody] RequerimentFilterDto filter)
+    {
+        var query = context.Requeriments.AsQueryable();
+        
+        query = query.Include(x => x.UserCreator)
+            .Include(x => x.UserAssigned);
+        
+        if (filter.Id > 0)
+        {
+            query = query.Where(r => r.Id == filter.Id);
+        }
+        
+        if (!string.IsNullOrEmpty(filter.Subject))
+        {
+            query = query.Where(r => r.Subject.Contains(filter.Subject));
+        }
+        
+        if (filter.Stage != Stage.None)
+        {
+            query = query.Where(r => r.Stage == filter.Stage);
+        }
+        
+        if (filter.Priority != Priority.None)
+        {
+            query = query.Where(r => r.Priority == filter.Priority);
+        }
+        
+        var requeriments = await query.ToListAsync();
+        
+        return Ok(requeriments);
     }
     
     [HttpPut("{id}")]
@@ -50,16 +98,29 @@ public class RequerimentsController(ApplicationDbContext context) : Controller
         return NoContent();
     }
     
-    [HttpPost("updateStage/{id}/{stage}")]
-    public async Task<IActionResult> ChangeStage(int id, int stage)
+    [HttpPost("updateStage")]
+    public async Task<IActionResult> ChangeStage([FromBody] ChangeStageDto dto)
     {
-        var requeriment = await context.Requeriments.FindAsync(id);
+        var requeriment = await context.Requeriments.FindAsync(dto.IdRequeriment);
         if (requeriment == null)
         {
             return NotFound();
         }
         
-        requeriment.Stage = (Stage)stage;
+        var track = new Tracking()
+        {
+            RequerimentId = dto.IdRequeriment,
+            Stage = dto.Stage,
+            Description = dto.Description,
+            UserId = dto.IdUser
+        };
+        
+        requeriment.Stage = dto.Stage;
+        requeriment.UpdatedAt = DateTime.UtcNow;
+        
+        context.Trackings.Add(track);
+        context.Entry(requeriment).State = EntityState.Modified;
+        
         await context.SaveChangesAsync();
         return NoContent();
     }
